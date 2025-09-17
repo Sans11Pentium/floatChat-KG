@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Oceanic Data Platform Design System - Ocean-themed colors and gradients */
+
+@layer base {
+  :root {
+    /* Ocean-themed background gradients */
+    --background: 210 30% 98%;
+    --foreground: 220 90% 15%;
+
+    /* Card and surface colors */
+    --card: 210 25% 99%;
+    --card-foreground: 220 80% 20%;
+
+    --popover: 210 25% 99%;
+    --popover-foreground: 220 80% 20%;
+
+    /* Deep ocean primary colors */
+    --primary: 220 85% 25%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 220 70% 45%;
+
+    /* Teal secondary colors */
+    --secondary: 185 60% 85%;
+    --secondary-foreground: 185 80% 25%;
+    --secondary-deep: 185 70% 35%;
+
+    /* Muted ocean tones */
+    --muted: 200 20% 92%;
+    --muted-foreground: 200 15% 45%;
+
+    /* Coral accent colors */
+    --accent: 15 85% 70%;
+    --accent-foreground: 15 90% 15%;
+    --accent-soft: 15 60% 88%;
+
+    /* Status colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 150 70% 45%;
+    --warning: 45 85% 55%;
+
+    /* Borders and inputs */
+    --border: 200 25% 85%;
+    --input: 200 25% 90%;
+    --ring: 220 85% 25%;
+
+    /* Ocean gradients */
+    --gradient-ocean: linear-gradient(135deg, hsl(220 85% 25%), hsl(185 70% 35%));
+    --gradient-surface: linear-gradient(180deg, hsl(210 30% 98%), hsl(200 20% 92%));
+    --gradient-coral: linear-gradient(45deg, hsl(15 85% 70%), hsl(25 80% 65%));
+
+    /* Shadows with ocean tint */
+    --shadow-ocean: 0 10px 30px -10px hsl(220 85% 25% / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(200 25% 50% / 0.15);
+    --shadow-glow: 0 0 40px hsl(220 70% 45% / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark ocean depths theme */
+    --background: 220 90% 8%;
+    --foreground: 210 40% 95%;
+
+    --card: 220 80% 10%;
+    --card-foreground: 210 40% 95%;
+
+    --popover: 220 80% 10%;
+    --popover-foreground: 210 40% 95%;
+
+    --primary: 220 70% 65%;
+    --primary-foreground: 220 90% 10%;
+    --primary-glow: 220 60% 75%;
+
+    --secondary: 185 40% 20%;
+    --secondary-foreground: 185 60% 85%;
+    --secondary-deep: 185 50% 15%;
+
+    --muted: 220 50% 15%;
+    --muted-foreground: 200 20% 65%;
+
+    --accent: 15 75% 60%;
+    --accent-foreground: 15 90% 95%;
+    --accent-soft: 15 40% 25%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 210 40% 95%;
+    --success: 150 60% 50%;
+    --warning: 45 80% 60%;
+
+    --border: 220 40% 25%;
+    --input: 220 40% 20%;
+    --ring: 220 70% 65%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Ocean-themed utility classes */
+@layer utilities {
+  .bg-gradient-ocean {
+    background: var(--gradient-ocean);
+  }
+  
+  .bg-gradient-surface {
+    background: var(--gradient-surface);
+  }
+  
+  .bg-gradient-coral {
+    background: var(--gradient-coral);
+  }
+  
+  .shadow-ocean {
+    box-shadow: var(--shadow-ocean);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+
+  .text-gradient-ocean {
+    background: var(--gradient-ocean);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
